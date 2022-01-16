@@ -8,6 +8,7 @@ if(len(args) == 0):
     print("引数がありません")
     sys.exit()
 
+
 def k1_to_kw(kana):
     k = kana[0]
     k2 = kana[0:2]
@@ -17,18 +18,32 @@ def k1_to_kw(kana):
     if False:
         return None
     elif(k3 in ['しゃう', 'しゅう', 'しょう']):
+        return 's  '
+    elif(k3 in ['じゃう', 'じゅう', 'じょう']):
+        return 'j  '
+    elif(k3 in ['しゃい', 'しゅい', 'しょい']):
         return 'sh '
+    elif(k3 in ['じゃい', 'じゅい', 'じょい']):
+        return 'j  '
+    elif(k3 in ['りゃい', 'りゅい', 'りょい']):
+        return 'ry '
     elif(k3 in ['ちゃう', 'ちゅう', 'ちょう']):
         return 'ch '
     elif(k3 in ['きゃう', 'きゅう', 'きょう']):
         return 'ky '
+    elif(k3 in ['りゃう', 'りゅう', 'りょう']):
+        return 'ry '
     elif(k2 in ['しゃ', 'しゅ', 'しょ']):
         return 'sh'
-    elif(k2 in ['ちゃ', 'ちゅ', 'ちょ']):
+    elif(k2 in ['じゃ', 'じゅ', 'じょ']):
+        return 'j '
+    elif(k2 in ['りゃ', 'りゅ', 'りょ']):
+        return 'ry'
+    elif(k2 in ['ちゃj', 'ちゅ', 'ちょ']):
         return 'ch'
     elif(k2 in ['きゃ', 'きゅ', 'きょ']):
         return 'ky'
-    elif(k in ['あ','い','う','え','お']):
+    elif(k in ['あ', 'い', 'う', 'え', 'お']):
         if(k == 'あ'):
             return 'a'
         elif(k == 'い'):
@@ -41,12 +56,18 @@ def k1_to_kw(kana):
             return 'o'
         else:
             return None
-    elif(k2 in ['かい','きい','くう','けう','こう']):
+    elif(k2 in ['かい', 'きい', 'くい', 'けい', 'こい']):
         return 'k '
-    elif(k in ['が','ぎ','ぐ','げ','ご']):
+    elif(k2 in ['かう', 'きう', 'くう', 'けう', 'こう']):
+        return 'k '
+    elif(k in ['が', 'ぎ', 'ぐ', 'げ', 'ご']):
         return 'g'
-    elif(k in ['か','き','く','け','こ']):
+    elif(k in ['か', 'き', 'く', 'け', 'こ']):
         return 'k'
+    elif(k2 in ['さい', 'しい', 'すい', 'せい', 'そい']):
+        return 's '
+    elif(k2 in ['さう', 'しう', 'すう', 'せう', 'そう']):
+        return 's '
     elif(k in ['さ', 'し', 'す', 'せ', 'そ']):
         return 's'
     elif(k in ['ざ', 'じ', 'ず', 'ぜ', 'ぞ']):
@@ -55,12 +76,22 @@ def k1_to_kw(kana):
         return 't'
     elif(k in ['だ', 'ぢ', 'づ', 'で', 'ど']):
         return 'd'
+    elif(k2 in ['ない', 'にい', 'ぬい', 'ねい', 'のい']):
+        return 'n '
+    elif(k2 in ['なう', 'にう', 'ぬう', 'ねう', 'のう']):
+        return 'n '
     elif(k in ['な', 'に', 'ぬ', 'ね', 'の']):
         return 'n'
     elif(k in ['は', 'ひ', 'ふ', 'へ', 'ほ']):
         return 'h'
+    elif(k in ['ば', 'び', 'ぶ', 'べ', 'ぼ']):
+        return 'b'
+    elif(k in ['ぱ', 'ぴ', 'ぷ', 'ぺ', 'ぽ']):
+        return 'p'
     elif(k in ['ま', 'み', 'む', 'め', 'も']):
         return 'm'
+    elif(k2 in ['やう', 'ゆう', 'よう']):
+        return 'y '
     elif(k in ['や', 'ゆ', 'よ']):
         return 'y'
     elif(k in ['ら', 'り', 'る', 'れ', 'ろ']):
@@ -69,6 +100,12 @@ def k1_to_kw(kana):
         return 'w'
     elif(k in ['ん']):
         return 'n'
+    elif(k in ['.', '。']):
+        return '.'
+    elif(k in [',', '、']):
+        return ','
+    elif(k in ['-', 'ー']):
+        return '-'
     else:
         return None
 
