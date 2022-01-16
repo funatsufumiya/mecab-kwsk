@@ -30,12 +30,16 @@ def k1_to_kw(kana):
         return 'j  '
     elif(k3 in ['りゃい', 'りゅい', 'りょい']):
         return 'ry '
+    elif(k3 in ['にゃい', 'にゅい', 'にょい']):
+        return 'ny '
     elif(k3 in ['ちゃう', 'ちゅう', 'ちょう']):
         return 'ch '
     elif(k3 in ['きゃう', 'きゅう', 'きょう']):
         return 'ky '
     elif(k3 in ['りゃう', 'りゅう', 'りょう']):
         return 'ry '
+    elif(k3 in ['にゃう', 'にゅう', 'にょう']):
+        return 'ny '
     elif(k2 in ['しゃ', 'しゅ', 'しょ']):
         return 'sh'
     elif(k2 in ['じゃ', 'じゅ', 'じょ']):
@@ -46,6 +50,8 @@ def k1_to_kw(kana):
         return 'ch'
     elif(k2 in ['きゃ', 'きゅ', 'きょ']):
         return 'ky'
+    elif(k2 in ['にゃ', 'にゅ', 'にょ']):
+        return 'ny'
     elif(k2 in ['ああ', 'いい', 'うう', 'ええ', 'おお']):
         if(k == 'あ'):
             return 'a '
@@ -95,6 +101,10 @@ def k1_to_kw(kana):
         return 's '
     elif(k in ['さ', 'し', 'す', 'せ', 'そ']):
         return 's'
+    elif(k2 in ['ざい', 'じい', 'ずい', 'ぜい', 'ぞい']):
+        return 'z '
+    elif(k2 in ['ざう', 'じう', 'ずう', 'ぜう', 'ぞう']):
+        return 'z '
     elif(k in ['ざ', 'じ', 'ず', 'ぜ', 'ぞ']):
         return 'z'
     elif(k2 in ['たい', 'ちい', 'つい', 'てい', 'とい']):
@@ -157,6 +167,10 @@ def k1_to_kw(kana):
         return '.'
     elif(k in [',', '、']):
         return ','
+    elif(k in ['[', '「']):
+        return '['
+    elif(k in [']', '」']):
+        return ']'
     # elif(k in ['-', 'ー']):
     #     return '-'
     else:
