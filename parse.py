@@ -140,6 +140,10 @@ def k1_to_kw(kana):
         return 'y '
     elif(k in ['や', 'ゆ', 'よ']):
         return 'y'
+    elif(k2 in ['らい', 'りい', 'るい', 'れい', 'ろい']):
+        return 'r '
+    elif(k2 in ['らう', 'りう', 'るう', 'れう', 'ろう']):
+        return 'r '
     elif(k in ['ら', 'り', 'る', 'れ', 'ろ']):
         return 'r'
     elif(k in ['わ', 'を']):
@@ -150,8 +154,8 @@ def k1_to_kw(kana):
         return '.'
     elif(k in [',', '、']):
         return ','
-    elif(k in ['-', 'ー']):
-        return '-'
+    # elif(k in ['-', 'ー']):
+    #     return '-'
     else:
         return None
 
