@@ -124,6 +124,10 @@ def k1_to_kw(kana):
         return 'b '
     elif(k in ['ば', 'び', 'ぶ', 'べ', 'ぼ']):
         return 'b'
+    elif(k2 in ['ぱい', 'ぴい', 'ぷい', 'ぺい', 'ぽい']):
+        return 'p '
+    elif(k2 in ['ぱう', 'ぴう', 'ぷう', 'ぺう', 'ぽう']):
+        return 'p '
     elif(k in ['ぱ', 'ぴ', 'ぷ', 'ぺ', 'ぽ']):
         return 'p'
     elif(k2 in ['まい', 'みい', 'むい', 'めい', 'もい']):
